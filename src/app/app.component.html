@@ -1,17 +1,28 @@
-<div style="text-align: center">
-  <h1>
-    {{ title }}
-  </h1><hr>
-  <br>
-  <input type="number" name="num1" [(ngModel)]="num1">
-  <input type="number" name="num2" [(ngModel)]="num2">
-  <br><br>
-  <button (click) = "add()">ADD</button>
-  <button (click) = "sub()">SUB</button>
-  <button (click) = "mul()">MUL</button>
-  <button (click) = "div()">DIV</button>
+<div style="text-align: center" class="mt-5" style="margin-right: 500px; margin-left: 500px;">
+    
+    <h1>
+      {{ title }}
+    </h1>
+    <hr>
 
-  <h3>RESULT : {{ num3 }}</h3>
+<div class="row">
+  <div class="col" style="text-align: center">
+    <br>
+    <h2>Enter numbers to calculate</h2>
+    <br>  
+    <input type="number" name="num1" [(ngModel)]="num1">
+    <input type="number" name="num2" [(ngModel)]="num2">
+    <br><br>
+    <button (click) = "add()" class="button">ADD</button>
+    <button (click) = "sub()" class="button">SUB</button>
+    <button (click) = "mul()" class="button">MUL</button>
+    <button (click) = "div()" class="button">DIV</button>
+    <br><br>
+    <div class="result">Result : {{ num3 }}</div>
+  </div>
+</div>
+  
+    
 
 </div>
 <router-outlet></router-outlet>
